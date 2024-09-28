@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #010110;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            text-align: center;
+            color: aliceblue;
+            padding: 0 30px;
+        }
+        .content {
+            background-color: rgb(0, 0, 0);
+            width: 300px;
+            height: 300px;
+            padding: 60px 30px;
+            border-top-left-radius: 70px;
+            border-top-right-radius: 70px;
+            border-bottom-right-radius: 200px;
+            border-bottom-left-radius: 200px;
+            border: 5px solid #ff00ae;
+            position: relative;
+        }
+        .time {
+            background-color: aliceblue;
+            color: black;
+            border-radius: 15px;
+        }
+        h1 {
+            text-align: end;
+            padding-right: 20px;
+            font-size: 50px;
+            border: 4px solid rgb(159, 99, 196);
+            border-radius: 15px;
+        }
+        .Click {
+            position: relative;
+            height: 150px;
+            bottom: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        .btn2 {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            border: 3px solid #744064;
+            background-color: #ff01ea;
+            box-shadow: 0px 0px 100px rgb(255, 0, 204);
+        }
+        .btn1 {
+            background-color: #ff01ea;
+            box-shadow: 0px 0px 120px rgb(253, 31, 209);
+            position: absolute;
+            top: 50px;
+            font-weight: 900;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            border: 5px solid #b81487;
+        }
+        .btn1:active {
+            background-color: rgb(0, 0, 0);
+        }
+        .btn2:active {
+            background-color: rgb(0, 0, 0);
+        }
+        h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        @media(max-width:400px) {
+            .content {
+                width: 300px;
+                height: 230px;
+            }
+            h1 {
+            padding-right: 20px;
+            font-size: 40px;
+            border: 4px solid rgb(247, 0, 255);
+            }
+            .btn2 {
+                width: 25px;
+                height: 25px;
+            }
+            .btn1 {
+                width: 65px;
+                height: 65px;
+            }
+        }
+        @media(max-width:350px) {
+       
+            .btn2 {
+                width: 25px;
+                height: 25px;
+            }
+
+            .btn1 {
+                width: 80px;
+                height: 80px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .content {
+                width: 300px;
+                height: 230px;
+            }
+            h2 {
+                font-size: 15px;
+            }
+
+            h5 {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+        .display {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 20px;
+            position: relative;
+            bottom: 40px;
+            padding: 0 10px;
+        }
+        .display h5 {
+            padding: 0 5px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        button {
+            margin: 5px;
+            background-color: transparent;
+            color: aliceblue;
+            outline: none;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            border: 3px solid #ff00ae;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 900;
+            font-size: 20px;
+            transition: 0.2s;
+        }
+     
+        button:hover{
+            background-color: #ff01b3;
+        }
+        .groub-btn {
+            flex-wrap: wrap;
+            position: relative;
+            top: 30px;
+            padding: 0 30px;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        .demo{
+            font-size: 15px;
+        }
+        #btnclick1:active,
+        #btnclick2:active,
+        #btnclick3:active,
+        #btnclick4:active,
+        #btnclick5:active,
+        #btnclick6:active,
+        #btnclick7:active,
+        #btnclick8:active,
+        #btnclick9:active{
+           background-color: rgb(255, 255, 255);
+           color: #010110;
+        }
+    </style>
+</head>
+<body>
+    <div class="groub-btn">
+        <button id="btnclick1">بسم الله</button>
+        <button id="btnclick2">الحمد لله </button>
+        <button id="btnclick3">الله اكبر</button>
+        <button id="btnclick4">سبحان الله</button>
+        <button id="btnclick5">استغفروا الله</button>
+        <button id="btnclick6"> لا اله الا الله</button>
+        <button id="btnclick7">سبحان الله وبحمده سبحان الله العظيم</button>
+        <button id="btnclick8">سبحان الله والحمد لله</button>
+        <button id="btnclick9">لا حول ولا قوه الا بالله</button>
+    </div>
+    <div class="container">
+        <div class="content" id="content">
+            <h2 id="demo"  style="color: rgb(233, 4, 202); width: 100%; font-size: 20px; "></h1>
+            <div class="time" id="time">
+                <h1 id="counter">0</h1>
+            </div>
+            <div class="display">
+                <h5>Count</h5>
+                <h5>Reset</h5>
+            </div>
+            <div class="Click">
+                <input type="button" class="btn1" id="click">
+                <input type="button" class="btn2" id="return">
+            </div>
+        </div>
+    </div>
+    <script>
+        let click = document.getElementById("click");
+        let rturn = document.getElementById("return");
+        let counter = document.getElementById("counter");
+        let demo = document.getElementById("demo");
+        let btnclick1 = document.getElementById("btnclick1");
+        let btnclick2 = document.getElementById("btnclick2");
+        let btnclick3 = document.getElementById("btnclick3");
+        let btnclick4 = document.getElementById("btnclick4");
+        let btnclick5 = document.getElementById("btnclick5");
+        let btnclick6 = document.getElementById("btnclick6");
+        let btnclick7 = document.getElementById("btnclick7");
+        let btnclick8 = document.getElementById("btnclick8");
+        let count = 0;
+        click.onclick = function () {
+            count++;
+            counter.textContent = count;
+        }
+        rturn.onclick = function () {
+            count = 0;
+            counter.textContent = count;
+        }
+        btnclick1.onclick = function () {
+            document.getElementById("demo").innerHTML = "بسم الله";
+            count = 0;
+            counter.textContent = count;
+        }
+        btnclick2.onclick = function () {
+            document.getElementById("demo").innerHTML = "الحمد لله";
+            count = 0;
+            counter.textContent = count;
+        }
+        btnclick3.onclick = function () {
+            document.getElementById("demo").innerHTML = "الله اكبر";
+            count = 0;
+            counter.textContent = count;
+        }
+        btnclick4.onclick = function () {
+            document.getElementById("demo").innerHTML = "سبحان الله";
+            count = 0;
+            counter.textContent = count;
+        }
+        btnclick5.onclick = function () {
+            document.getElementById("demo").innerHTML = "استغفروا الله ";
+            count = 0;
+            counter.textContent = count;
+        }
+        btnclick6.onclick = function () {
+            document.getElementById("demo").innerHTML = "لا اله الا الله";
+            count = 0;
+            counter.textContent = count;
+        }
+        btnclick7.onclick = function () {
+            document.getElementById("demo").innerHTML = "سبحان الله وبحمده سبحان الله العظيم";
+            count = 0;
+            counter.textContent = count;
+        }
+        btnclick8.onclick = function () {
+            document.getElementById("demo").innerHTML = "سبحان الله والحمد لله";
+            count = 0;
+            counter.textContent = count;
+        }
+        btnclick9.onclick = function () {
+            document.getElementById("demo").innerHTML = "لا حول ولا قوه الا بالله";
+            count = 0;
+            counter.textContent = count;
+        }
+    </script>
+</body>
+
+</html>
